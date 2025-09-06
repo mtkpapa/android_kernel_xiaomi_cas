@@ -1,2 +1,12 @@
 source techpack/data/drivers/rmnet/perf/Kconfig
 source techpack/data/drivers/rmnet/shs/Kconfig
+
+menu "Camera packages"
+
+config TECHPACK_CAMERA_XIAOMI_CAS
+    bool "Xiaomi camera CAS"
+    help
+      Xiaomi camera CAS
+
+endmenu
+

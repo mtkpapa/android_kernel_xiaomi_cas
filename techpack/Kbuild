@@ -2,7 +2,13 @@
 TECHPACK?=y
 
 techpack-dirs := $(shell find $(srctree)/techpack -maxdepth 1 -mindepth 1 -type d -not -name ".*")
+ifeq ($(CONFIG_TECHPACK_CAMERA_XIAOMI_CAS),y)
+techpack-dirs += $(srctree)/techpack/camera-xiaomi-cas
+endif
 obj-${TECHPACK} += stub/ $(addsuffix /,$(subst $(srctree)/techpack/,,$(techpack-dirs)))
 
 techpack-header-dirs := $(shell find $(srctree)/techpack -maxdepth 1 -mindepth 1 -type d -not -name ".*")
+ifeq ($(CONFIG_TECHPACK_CAMERA_XIAOMI_CAS),y)
+techpack-header-dirs += $(srctree)/techpack/camera-xiaomi-cas
+endif
 header-${TECHPACK} += $(addsuffix /include/uapi/,$(subst $(srctree)/techpack/,,$(techpack-header-dirs)))
