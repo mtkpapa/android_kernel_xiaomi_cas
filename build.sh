@@ -85,7 +85,6 @@ fi
 
 echo "======= CLEANING UP ======="
 
-rm -rf mkdtboimg.py && echo "  RM      mkdtboimg.py"
 rm -rf KernelSU-Next/ && echo "  RM      KernelSU-Next"
 rm -rf out/ && echo "  RM      out"
 rm -rf AnyKernel3 && echo "  RM      AnyKernel3"
