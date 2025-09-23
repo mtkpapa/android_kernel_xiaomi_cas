@@ -70,10 +70,10 @@ echo "======= END OF BUILD ======="
 ZIP_NAME="UMPASS-$(date "+%Y%m%d-%H%M").zip"
 KOUT_PATH="/mnt/d/users/juan/kernels/cas/"
 
-if [ -f "out/arch/arm64/boot/Image" ]; then
+if [ -f "out/arch/arm64/boot/Image.gz-dtb" ]; then
     echo "Image found. Build successful"
     cd AnyKernel3
-	cp ../out/arch/arm64/boot/Image Image
+	cp ../out/arch/arm64/boot/Image.gz-dtb Image.gz-dtb
 	zip -r9 ../$ZIP_NAME -- *
 	cd ..
 	cp $ZIP_NAME $KOUT_PATH
