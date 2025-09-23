@@ -45,7 +45,7 @@ git clone https://github.com/liyafe1997/AnyKernel3 -b kona --single-branch --dep
 
 if [ $KSU_E -eq 1 ]; then
     echo "Downloading KernelSU-Next"
-    curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -
+    curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s v1.0.9
 else 
     echo "Building without KernelSU-Next"
 fi
