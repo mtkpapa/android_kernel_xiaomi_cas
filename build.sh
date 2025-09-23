@@ -57,7 +57,7 @@ make "${MAKE_ARGS[@]}" cas_defconfig
 
 sed -i "s/${local_version_str}/${local_version_date_str}/g" out/.config
 
-if [ $KSU_ENABLE -eq 1 ]; then
+if [ $KSU_E -eq 1 ]; then
 		scripts/config --file out/.config -e KSU
 	else
 		scripts/config --file out/.config -d KSU
