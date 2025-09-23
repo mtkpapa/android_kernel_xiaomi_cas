@@ -67,7 +67,7 @@ make "${MAKE_ARGS[@]}" -j$(nproc --all)
 
 echo "======= END OF BUILD ======="
 
-ZIP_NAME="Z419-$(date "+%Y%m%d-%H%M").zip"
+ZIP_NAME="UMPASS-$(date "+%Y%m%d-%H%M").zip"
 KOUT_PATH="/mnt/d/users/juan/kernels/cas/"
 
 if [ -f "out/arch/arm64/boot/Image" ]; then
